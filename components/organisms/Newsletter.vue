@@ -39,7 +39,7 @@
         this.error = false
         if (!this.email) return
         try {
-          const resp = await this.$axios.$post('/api/v1/newsletter/subscribe', { email: this.email })
+          const resp = await this.$axios.$post('/newsletter/subscribe', { email: this.email }, { withCredentials: false })
           console.info('resp', resp)
           this.success = true
         } catch (error) {
