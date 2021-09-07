@@ -1,3 +1,11 @@
+const storyblokConfig = {
+  accessToken: process.env.SB_CLIENT_ACCESS_TOKEN,
+  defaultLanguage: 'en',
+  cacheProvider: 'memory',
+  version: process.env.NODE_ENV === 'production' ? 'published' : 'draft',
+  disableManagementApi: true
+}
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -26,7 +34,7 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [{ path: '~/components', pathPrefix: false, prefix: '' }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -36,6 +44,9 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nujek/ui',
+    [
+      '@nujek/storyblok', { storyblokConfig, debug: true }
+    ]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

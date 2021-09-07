@@ -880,6 +880,14 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
+"@babel/runtime-corejs3@^7.4.5":
+  version "7.15.4"
+  resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.15.4.tgz#403139af262b9a6e8f9ba04a6fdcebf8de692bf1"
+  integrity sha512-lWcAqKeB624/twtTc3w6w/2o9RqJPaNBhPGK6DKLSiwuVWC7WFkypWyNg+CpZoyJH0jVzv1uMtXZ/5/lQOLtCg==
+  dependencies:
+    core-js-pure "^3.16.0"
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.14.0", "@babel/runtime@^7.8.4":
   version "7.15.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
@@ -969,6 +977,18 @@
     methods "^1.1.2"
     path-to-regexp "^6.1.0"
 
+"@marvr/storyblok-rich-text-types@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@marvr/storyblok-rich-text-types/-/storyblok-rich-text-types-2.0.1.tgz#068c45a1ed9112d1a10ca6b7202ed787771f5f23"
+  integrity sha512-S11Aey2mpmg2qXuI2OnhKMpEoZW8OzMhuDiLg9zW5Mqlna5g8aJSmy2468feo/0qOLwAT3gpHyNScPKBTtTswQ==
+
+"@marvr/storyblok-rich-text-vue-renderer@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@marvr/storyblok-rich-text-vue-renderer/-/storyblok-rich-text-vue-renderer-2.0.1.tgz#ff8ca1334ce1d9734a51d657b2a8000e64142ac8"
+  integrity sha512-bz3IRyTAx/XoG9Myt90oEcXrZmmRjZXsTL3qlT1EGYO9P2JTr1KIz+7DNvew+Ui1a4U036TCFsCp151LjB88NQ==
+  dependencies:
+    "@marvr/storyblok-rich-text-types" "2.0.1"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -1018,6 +1038,33 @@
   dependencies:
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
+
+"@nujek/nuxt-storyblok-queries@^1.2.16":
+  version "1.2.16"
+  resolved "https://registry.yarnpkg.com/@nujek/nuxt-storyblok-queries/-/nuxt-storyblok-queries-1.2.16.tgz#cefe15b92c804865d2624774d3c83b1fc2467f0b"
+  integrity sha512-XwXDDBQVtCWLgeFIRCvXb3oxyDBS1ONSsgRSqKM+hfuU1EwvgHam60snFprb4MGOfCycoce1HSMAU2LZeBLjqQ==
+  dependencies:
+    axios "^0.21.0"
+    camelcase "^6.2.0"
+    consola "^2.15.0"
+    storyblok-js-client "^2.5.2"
+
+"@nujek/shared@*":
+  version "0.0.117"
+  resolved "https://registry.yarnpkg.com/@nujek/shared/-/shared-0.0.117.tgz#324f25e2c655e1813ac5730b47abb340c54140f0"
+  integrity sha512-SK+7ThFkMSWospLXWBDXUhQtaKxDWwxP6/lzDrqsokhufLU2yJxBS75/kZ4O2qYHfz+0D997h8AofYZPZGWNxQ==
+
+"@nujek/storyblok@^0.0.103":
+  version "0.0.103"
+  resolved "https://registry.yarnpkg.com/@nujek/storyblok/-/storyblok-0.0.103.tgz#fc265896492d2c76b519bd713df7115c49c61e57"
+  integrity sha512-EH6Lh19qE12lZGmxjIR/9kbVRSS/woe+Ixc/88sBnZ6nVYtMZGJxwDbkaDNoeqgav946y85+wYiA43/+k3HjHw==
+  dependencies:
+    "@marvr/storyblok-rich-text-vue-renderer" "^2.0.1"
+    "@nujek/nuxt-storyblok-queries" "^1.2.16"
+    "@nujek/shared" "*"
+    "@nuxtjs/composition-api" "^0.24.6"
+    storyblok-nuxt "^2.0.1"
+    vue-lazy-hydration "^2.0.0-beta.4"
 
 "@nujek/ui@^2.0.22":
   version "2.0.22"
@@ -1375,6 +1422,19 @@
     consola "^2.15.3"
     defu "^5.0.0"
 
+"@nuxtjs/composition-api@^0.24.6":
+  version "0.24.7"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/composition-api/-/composition-api-0.24.7.tgz#76ec3660a03cd7bdb8b85fd31e8dc6a2b7194e8f"
+  integrity sha512-q633RvsCi3veuGzTSkP/+a55Fn9EZS1APV2GJrdjajnBKKOMNPIXlAC8xAWGcsHE73/Cgf9DfGURQhcFvERRJA==
+  dependencies:
+    "@vue/composition-api" "1.0.0-rc.14"
+    defu "^5.0.0"
+    estree-walker "^2.0.2"
+    fs-extra "^9.1.0"
+    magic-string "^0.25.7"
+    ufo "^0.7.7"
+    upath "^2.0.1"
+
 "@nuxtjs/composition-api@^0.28.0":
   version "0.28.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/composition-api/-/composition-api-0.28.0.tgz#ba384eecff094820adbc534d69157b8c878e24d6"
@@ -1695,6 +1755,13 @@
     vue-template-es2015-compiler "^1.9.0"
   optionalDependencies:
     prettier "^1.18.2"
+
+"@vue/composition-api@1.0.0-rc.14":
+  version "1.0.0-rc.14"
+  resolved "https://registry.yarnpkg.com/@vue/composition-api/-/composition-api-1.0.0-rc.14.tgz#4803fbccf3f3c770416e69095010c7bc0c4aa1c3"
+  integrity sha512-WKbOiy1zk8loM7ma88fOH0yacOEfMIQb0IZJEq561A+4C8GvLSqVSLT5K1iBVkzzJ07Pha8ntbeWSUQlBhRDKg==
+  dependencies:
+    tslib "^2.3.0"
 
 "@vue/composition-api@^1.1.4":
   version "1.1.4"
@@ -2214,7 +2281,14 @@ axios-retry@^3.1.9:
   dependencies:
     is-retry-allowed "^1.1.0"
 
-axios@^0.21.1:
+axios@^0.19.0:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
+  integrity sha512-fjgm5MvRHLhx+osE2xoekY70AhARk3a6hkN+3Io1jc00jtquGvxYlKlsFUhmUET0V5te6CcZI7lcv2Ym61mjHA==
+  dependencies:
+    follow-redirects "1.5.10"
+
+axios@^0.21.0, axios@^0.21.1:
   version "0.21.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
@@ -3051,6 +3125,11 @@ core-js-compat@^3.12.1, core-js-compat@^3.14.0, core-js-compat@^3.16.0:
     browserslist "^4.16.8"
     semver "7.0.0"
 
+core-js-pure@^3.16.0:
+  version "3.17.2"
+  resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.17.2.tgz#ba6311b6aa1e2f2adeba4ac6ec51a9ff40bdc1af"
+  integrity sha512-2VV7DlIbooyTI7Bh+yzOOWL9tGwLnQKHno7qATE+fqZzDKYr6llVjVQOzpD/QLZFgXDPb8T71pJokHEZHEYJhQ==
+
 core-js@^2.6.5:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
@@ -3394,6 +3473,13 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
+debug@=3.1.0, debug@~3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
+  dependencies:
+    ms "2.0.0"
+
 debug@^3.1.0, debug@^3.1.1, debug@^3.2.7:
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
@@ -3407,13 +3493,6 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1:
   integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
   dependencies:
     ms "2.1.2"
-
-debug@~3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
-  integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
-  dependencies:
-    ms "2.0.0"
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
@@ -4410,6 +4489,13 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
+
+follow-redirects@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+  integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
+  dependencies:
+    debug "=3.1.0"
 
 follow-redirects@^1.0.0, follow-redirects@^1.14.0:
   version "1.14.3"
@@ -7851,7 +7937,7 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
-qs@^6.9.4:
+qs@^6.5.2, qs@^6.9.4:
   version "6.10.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.10.1.tgz#4931482fa8d647a5aab799c5271d2133b981fb6a"
   integrity sha512-M528Hph6wsSVOBiYUnGf+K/7w0hNshs/duGsNXPUCLH5XAqjEtiPGwNONLV0tBH8NoGb0mvD5JubnUTrujKDTg==
@@ -8711,6 +8797,35 @@ std-env@^2.2.1, std-env@^2.3.0:
   dependencies:
     ci-info "^3.0.0"
 
+storyblok-js-client@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-2.5.2.tgz#37cc4017f173a59e57c1c061a380efb26441c468"
+  integrity sha512-EfRrQS6XQTsjyaRtlxpbfgw1AVc3OHSP4UrkCUHYeCug7XtFxZGI9+iHPLyUBDny21WjancJ9YqrEGGAIUT/SA==
+  dependencies:
+    "@babel/runtime-corejs3" "^7.4.5"
+    axios "^0.19.0"
+    qs "^6.5.2"
+
+storyblok-js-client@^4.0.3:
+  version "4.1.4"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-4.1.4.tgz#55f4d3012c6d78cc1bc0ffa58c25e991e5003397"
+  integrity sha512-gwQ2JZD7Dj8QdK1Rz1ypH70W+wES7p46FYVUHA/n20HxaPQ6P5bFwCFdrJIjgeoVRwaM1JnXx4E8g+uJT+wYSA==
+  dependencies:
+    qs "^6.9.4"
+
+storyblok-nuxt@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/storyblok-nuxt/-/storyblok-nuxt-2.0.1.tgz#d535d1b0a6c13b8a4da1331a0ba91a549e0f1bf3"
+  integrity sha512-MwLfYmaKmb9vkwhWU51aGaU/f7ZbdObiv5N8jT4DsUFkDnX/KIgqROa6cV5qyX4nPNBmVigJGC2hmVtx9nCZ1w==
+  dependencies:
+    storyblok-js-client "^4.0.3"
+    storyblok-vue "^1.0.5"
+
+storyblok-vue@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/storyblok-vue/-/storyblok-vue-1.0.5.tgz#c9a82cc5be45c9c5af7d48477e69e207d60b5f38"
+  integrity sha512-xWnI7CY7DN+NBbG5PvdJ7cEDCjMSroIvppBfSYiM3HePoXiZSJ8X/CaLezJct2OxtchsArpbY/ZxghBseZCqtQ==
+
 stream-browserify@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.2.tgz#87521d38a44aa7ee91ce1cd2a47df0cb49dd660b"
@@ -9254,7 +9369,7 @@ ua-parser-js@^0.7.28:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
   integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
-ufo@^0.7.4, ufo@^0.7.5, ufo@^0.7.9:
+ufo@^0.7.4, ufo@^0.7.5, ufo@^0.7.7, ufo@^0.7.9:
   version "0.7.9"
   resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.7.9.tgz#0268e3734b413c9ed6f3510201f42372821b875c"
   integrity sha512-6t9LrLk3FhqTS+GW3IqlITtfRB5JAVr5MMNjpBECfK827W+Vh5Ilw/LhTcHWrt6b3hkeBvcbjx4Ti7QVFzmcww==
@@ -9535,6 +9650,11 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.4.tgz#532955cc1eb208a3d990b3a9f9a70574657e08f2"
   integrity sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
+
+vue-lazy-hydration@^2.0.0-beta.4:
+  version "2.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/vue-lazy-hydration/-/vue-lazy-hydration-2.0.0-beta.4.tgz#11e7021a9bac003ea6ed74f132dcd0d025fafc1f"
+  integrity sha512-bhr7AxzrSEPed4cOawIeCxJmR8pglberR78x1zs0886xR+47/EXE9s0Ezss90CPINo8ApzUfA/r+SbNffn+t9w==
 
 vue-loader@^15.9.7:
   version "15.9.8"

@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
+    "@nujek/storyblok": "^0.0.103",
     "@nujek/ui": "^2.0.22",
     "@nuxtjs/composition-api": "^0.28.0",
     "@nuxtjs/eslint-config": "^6.0.1",

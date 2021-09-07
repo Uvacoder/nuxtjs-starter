@@ -1,12 +1,24 @@
 <template>
-<div>
-  <Tutorial/>
-  <NjSection>Default Section</NjSection>
-  <NjSection variant="boxed">Boxed Section</NjSection>
-  <NjSection variant="fullWidth">Full Width Section</NjSection>
-</div>
+<Bloks :bloks="story.content.body" />
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $storyblok, error }) {
+    try {
+      const { story } = await $storyblok.getCurrentStory({
+        resolve_links: 'story'
+      })
+      return {
+        story
+      }
+    } catch (e) {
+      console.error('Exception', e)
+      error({
+        statusCode: 404,
+        message: e.message
+      })
+    }
+  }
+}
 </script>

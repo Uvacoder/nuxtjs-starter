@@ -12,7 +12,7 @@ const settings = {
       },
       variants: {
         boxed: {
-          wrapper: 'bg-teal-200 flex justify-center',
+          wrapper: 'bg-teal-200 flex justify-center my-8',
           container: 'bg-red-400 max-w-screen-2xl'
         },
         fullWidth: {
