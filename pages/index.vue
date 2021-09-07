@@ -1,5 +1,8 @@
 <template>
-<Bloks :bloks="story.content.body" />
+<div>
+  <Bloks :bloks="story.content.body" />
+  <Newsletter />
+</div>
 </template>
 
 <script>
