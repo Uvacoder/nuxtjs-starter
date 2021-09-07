@@ -6,9 +6,6 @@ const storyblokConfig = {
   disableManagementApi: true
 }
 
-const isServerlessEnvironment = !!process.env.NOW_REGION
-
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -37,7 +34,7 @@ export default {
   //     handler: '~/server-middleware/newsletter.js'
   //   }
   // ],
-  serverMiddleware: isServerlessEnvironment ? [] : ['~/api/newsletter.js'],
+  serverMiddleware: [{ path: '/api/v1', handler: '~/api/index.js' }],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [

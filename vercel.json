@@ -1,16 +1,13 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
-        "serverFiles": ["server-middleware/**"]
+        "serverFiles": ["api/**"],
+        "internalServer": true
       }
     }
-  ],
-  "functions": {
-    "api/newsletter.js": {
-      "memory": 3008
-    }
-  }
+  ]
 }
