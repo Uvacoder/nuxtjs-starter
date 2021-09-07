@@ -7,5 +7,10 @@
         "serverFiles": ["server-middleware/**"]
       }
     }
-  ]
+  ],
+  "functions": {
+    "api/newsletter.js": {
+      "memory": 3008
+    }
+  }
 }

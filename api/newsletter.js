@@ -1,8 +1,8 @@
-const bodyParser = require('body-parser')
-const app = require('express')()
+const express = require('express')
 
-app.use(bodyParser.json())
-app.post('/subscribe', (req, res) => {
+const app = express()
+app.use(express.json())
+app.post('/api/v1/newsletter/subscribe', (req, res) => {
   const { email } = req.body
   if (!email) {
     res.status(400).send('Bad Request')
